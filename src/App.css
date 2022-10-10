@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
-}
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --BrightBlue: hsl(220, 98%, 61%);
+  --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Josefin Sans", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* =======================input CSS================= */
+.input-container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 30vh;
+  padding: 10px 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.input-content {
+  width: 500px;
+  padding: 1rem;
+}
+.input-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.input-content h1 {
   color: white;
+  letter-spacing: 0.6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.input-content input {
+  box-sizing: border-box;
+  background: var(--VeryDarkDesaturatedBlue);
+  width: 100%;
+  outline: none;
+  border: none;
+  height: 3.5rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.input-heading img {
+width: 25px;
+height: 25px;
+margin-right: 5px;
+cursor: pointer;
+}
+.input-heading img:hover
+{
+  opacity:0.75;
+
+}
+
+
+/* ======================List CSS=================== */
+.list-container {
+  width: 100%;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+}
+.list-content {
+  width: 500px;
+  height: 100%;
+  transform: translateY(-3.5rem);
+}
+ul {
+  width: 100%;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+li:first-of-type {
+  border-radius: 4px 4px 0 0;
+}
+li:last-of-type {
+  border-radius: 0 0 5px 5px;
+}
+li {
+  box-sizing: border-box;
+  width: 100%;
+  color: var(--VeryDarkGrayishBlue);
+  font-size: 1.1rem;
+  height: 4rem;
+  padding: 0.7rem 1.2rem;
+  border-bottom: 0.8px solid grey;
+  background: var(--VeryDarkDesaturatedBlue);
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+li button {
+  margin-left: 15px;
+  padding: 5px 8px;
+  border-radius: 3px;
+}
+
+button {
+  background: rgb(32, 132, 150);
+  color: white;
+  outline: none;
+  border: none;
+}
+.delete {
+  background: rgb(205, 45, 45);
+}
+
+
+
+@media (max-width:530px)
+{
+  .input-content {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+  .list-content
+  {
+    width: 90%;
   }
 }
