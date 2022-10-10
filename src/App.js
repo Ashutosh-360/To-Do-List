@@ -51,15 +51,27 @@ function App() {
   }
   const deleteFunc=(event)=>
   {
-    event.target.parentNode.parentNode.remove();
+    let arr=[...listItem];
+    const itemInArr=event.target.parentElement.parentElement.firstChild.innerText;
+    
+    let idx=0;
+    if(arr.indexOf(itemInArr)!==-1)
+    {
+        idx=arr.indexOf(itemInArr);
+    }
+    arr.splice(idx, 1);
+    setListItem(arr);
+    
   }
+
   const toggleModeHandler=()=>{
       setDarkMode(!darkMode);
   }
+
   useEffect(() => {
     localStorage.setItem("toDoList",JSON.stringify(listItem));
     
-  }, [listItem,deleteFunc]);
+  }, [listItem]);
   
 
   return (
