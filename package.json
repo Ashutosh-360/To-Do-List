@@ -1,6 +1,5 @@
 {
   "name": "to-do-list",
-  "homepage": "https://ashutosh-360.github.io/To-do-List/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
